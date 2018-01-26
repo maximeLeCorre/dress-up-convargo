@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,20 +10,26 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<style>
+			table
+			{
+				border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+			}
+			td
+			{
+				border: 1px solid black;
+			}
 			/* Remove the navbar's default margin-bottom and rounded borders */
 			.navbar
 			{
 				margin-bottom: 0;
 				border-radius: 0;
 			}
-
 			/* Add a gray background color and some padding to the footer */
 			footer
 			{
 				background-color: #f2f2f2;
 				padding: 25px;
 			}
-
 			.carousel-inner img
 			{
 				width: 100%;
@@ -30,7 +37,6 @@
 				margin: auto;
 				min-height:200px;
 			}
-
 			/* Hide the carousel text when the screen is less than 600 pixels wide */
 			@media (max-width: 600px)
 			{
@@ -67,6 +73,13 @@
 				</div>
 			</div>
 		</nav>
+		
+		<div class="item">
+		<center>
+        <img src="./images/camion.png" alt="Image" width=30%>    
+		</center>
+		</div>
+		
 		<div class="container-fluid">
 			<center>
 				<h1>Simulation</h1>
@@ -81,15 +94,15 @@
 				<center>
 					<div class="col-sm-4" style="background-color:lavender;">
 						Trucker Name : 
-						<input class="name" type="text" placeholder="Trucker name"/>
+						<input class="name" type="text"/>
 					</div>
 					<div class="col-sm-4" style="background-color:lavenderblush;">
 						Price by km : 
-						<input class="price-by-km" type="number" placeholder="Price by km"/>
+						<input class="price-by-km" type="number"/>
 					</div>
 					<div class="col-sm-4" style="background-color:lavender;">
 						Price by m3 : 
-						<input class="price-by-cubic" type="number" placeholder="Price by m3"/>
+						<input class="price-by-cubic" type="number"/>
 					</div>
 				</center>
 			</div>
@@ -97,15 +110,15 @@
 				<center>
 					<div class="col-sm-4" style="background-color:lavender;">
 						Shipper Name : 
-						<input class="name" type="text" placeholder="Shipper name"/>
+						<input class="name" type="text"/>
 					</div>
 					<div class="col-sm-4" style="background-color:lavenderblush;">
 						Distance in km : 
-						<input class="distance" type="number" placeholder="Distance in km"/>
+						<input class="distance" type="number"/>
 					</div>
 					<div class="col-sm-4" style="background-color:lavender;">
 						Volume in m3 : 
-						<input class="volume" type="number" placeholder="Volume in m3"/>
+						<input class="volume" type="number"/>
 					</div>
 					<div class="col-sm-4" style="background-color:lavender;">
 						Deductible Option : 
@@ -119,6 +132,7 @@
 		<center>
 			<button id="compute">Compute</button>
 		</center>
+		
 		<div id="actors"></div>
 		<script src="convargo.js"></script>
 		<script src="index.js"></script>

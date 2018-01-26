@@ -31,6 +31,9 @@
     const actors = CONVARGO.payActors(trucker, distance, volume, option);
 
     render(actors);
+	
+	var x = document.createElement("TABLE");
+	x.insertRow("dddddddddddddddddddd");
 
     return;
   });
